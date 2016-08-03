@@ -50,14 +50,13 @@ gpgcheck=0
             //fmt.Printf("[DEBUG] EndPoints: (%v)\n", endpoints)
             for i, endpoint := range endpoints {
               //fmt.Printf("[DEBUG] EndPoint: (%v)\n", endpoint)
-              repo_name := fmt.Sprintf("%v-%v", repo.Name, i)
-              repo_name = strings.Replace(repo_name, "-cache", "", 1)
+              repo_name := strings.Replace(repo.Name, "-cache", "", 1)
+              repo_id := fmt.Sprintf("%v-%v", repo_name, i)
               repo_path := fmt.Sprintf("%v/%v", repo_name, endpoint)
-              metadata_set.WriteString(fmt.Sprintf(repo_entry, repo_name, repo_name, server, port, repo_path))
-              f.WriteString(fmt.Sprintf(repo_entry, repo_name, repo_name, server, port, repo_path))
+              metadata_set.WriteString(fmt.Sprintf(repo_entry, repo_id, repo_id, server, port, repo_path))
+              f.WriteString(fmt.Sprintf(repo_entry, repo_id, repo_id, server, port, repo_path))
             }
           }
-          //metadata_set.WriteString(fmt.Sprintf("Blub %v\n", repo_file))
           //fmt.Printf("[DEBUG] %v: %v-%v.repo Supported!\n", repo.Name, baseVer, archVer)
         }
       }
