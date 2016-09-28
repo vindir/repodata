@@ -21,7 +21,7 @@ Once you've got a properly configured go environment these can be pulled down wi
 
 yumfactory uses the [viper package](https://github.com/spf13/viper) and supports
 configuration files in yaml or json format with a properly set extension. The
-filename should be ```repodata`` as in ```repodata.yaml```
+filename should be `repodata` as in `repodata.yaml`
 
 Example:
 ```yaml
