@@ -7,15 +7,22 @@ in their yum.conf
 
 ### Building
 
-The yumfactory has a few external depencencies
+The yumfactory has a few external depencencies.  If you aren't familiar with 
+setting up your go environment please read through [this go introduction](https://howistart.org/posts/go/1).
 
 ```
+# Once you've got a properly configured go environment these can be pulled down with go get
 github.com/spf13/viper
 github.com/spf13/cobra
 gopkg.in/resty.v0
 ```
 
-Once you've got a properly configured go environment these can be pulled down with __go get__.
+Once dependencies are in place.  Build the project as normal
+```bash
+go get github.com/vindir/yumfactory
+cd $GO_HOME/src/github.com/vindir/yumfactory
+go build
+```
 
 ### Configuring
 
