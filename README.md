@@ -12,9 +12,9 @@ setting up your go environment please read through [this go introduction](https:
 
 ```
 # Once you've got a properly configured go environment these can be pulled down with go get
-github.com/spf13/viper
-github.com/spf13/cobra
-gopkg.in/resty.v0
+go get github.com/spf13/viper
+go get github.com/spf13/cobra
+go get gopkg.in/resty.v0
 ```
 
 Once dependencies are in place.  Build the project as normal
